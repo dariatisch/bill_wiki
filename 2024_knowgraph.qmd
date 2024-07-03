@@ -16,15 +16,6 @@ slide-number:
 bibliography: references.bib
 ---
 
-::: notes
--   Have you ever wondered how Google seems to understand exactly what you're looking for, even if your search query is vague?
-
--   The secret behind such intelligent search results lies in a technology called a knowledge graph. A knowledge graph is a structured representation of knowledge, where entities (such as people, places, or things) and their relationships are interconnected, much like a map of knowledge.
-
--   Knowledge graphs are transforming how we access and interact with information. They power search engines, recommendation systems, virtual assistants
-
--   SO how can social scientists benefit from knowlegde graphs?\
-:::
 
 ## Introduction
 
