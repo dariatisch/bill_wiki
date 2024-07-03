@@ -205,7 +205,8 @@ pkgs <- c("xtable", # to export dfs as e.g. latex tables
               "lubridate", # recommended in method bites: parse date formats#
               "legislatoR", # to understand the method bites article better
           "jtools", # Visualizing regression model predictions
-          "ggpubr" # arrange ggplots
+          "ggpubr", # arrange ggplots
+          "htmltools"
 )
 
 # install missing packages
@@ -222,6 +223,7 @@ work_dir = ifelse(Sys.info()['nodename']=="P2010",
 setwd(work_dir)
 getwd()
 load("data_scraped/df_bill_wiki.RData")
+df = as.data.frame(df)
 df = df %>%
   mutate(d_wikidata = ifelse(is.na(id_wikidata), 0, 1),
          d_wikipedia = ifelse(is.na(page_id), 0, 1),
@@ -271,6 +273,52 @@ map_coverage <- ggplot(data = world_f , aes(x = long, y = lat, group = group),
         legend.title = element_text(size = 10),
         legend.text = element_text(size = 10))
 
+
+
+# descriptives
+cols <- c('d_wikidata', 'd_wikipedia', "properties_count","languages_count" )
+descriptives = stargazer(
+  df[, cols], type = "html", 
+  summary.stat = c("min", "max", "mean", "sd", "N"),
+  covariate.labels = c("Wikidata (yes-no)", "English Wikipedia article (yes-no)", "Number of properties",
+                       "Number of Wikipedias (languages)"))
+
+
+##### 2.2 Logistic regression on having a wikidata id/ page id  #####
+
+# create average effect plots for having a wikidata id
+glm_id_wikidata2 <- glm(d_wikidata ~ gender+birthyear+ 
+                          continent +max_rank, 
+                        family=binomial(link=logit),
+                        data=df)
+
+p1 = plot_model(glm_id_wikidata2,type="pred", terms = "gender", theme(classic),
+                axis.title = c( "Gender", "Probability (Wikidata item)") , title = "",
+                axis.lim = c(0,1)
+) 
+
+
+#  age
+p4 = plot_model(glm_id_wikidata2,type="pred", terms = "birthyear [all]", theme(classic),
+                axis.title = c( "Birthyear", "Probability (Wikidata item)") , title = "",
+                axis.lim = c(0,1)
+) 
+
+
+#  continent
+p7 = plot_model(glm_id_wikidata2,type="pred", terms = "continent", theme(classic),
+                axis.title = c( "Continent", "Probability (Wikidata item)") , title = "",
+                axis.lim = c(0,1) 
+) +  theme(axis.text.x = element_text(angle=35, hjust=1))
+
+
+
+#  max_rank
+p8 = plot_model(glm_id_wikidata2,type="pred", terms = "max_rank [all]", theme(classic),
+                axis.title = c( "Wealth rank (max)", "Probability (Wikidata item)") , title = "",
+                axis.lim = c(0,1)
+)
+
 ```
 
 ```{r}
@@ -285,17 +333,55 @@ map_coverage
 :::
 
 ## Descriptive statistics
-
+```{r}
+#| echo: false
+#| output: true
+browsable(HTML(descriptives))
+```
 ::: notes
 -   
 :::
 
 ## Who is covered?
-
+```{r}
+#| echo: false
+#| output: true
+p1
+```
 ::: notes
 -   
 :::
 
+## Who is covered?
+```{r}
+#| echo: false
+#| output: true
+p8
+```
+::: notes
+-   
+:::
+
+## Who is covered?
+```{r}
+#| echo: false
+#| output: true
+p4
+```
+::: notes
+-   
+:::
+
+
+## Who is covered?
+```{r}
+#| echo: false
+#| output: true
+p7
+```
+::: notes
+-   
+:::
 ## Predicted probabilities of having Wikidata item
 
 ::: notes
