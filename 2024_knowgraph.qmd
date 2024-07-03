@@ -382,11 +382,7 @@ p7
 ::: notes
 -   
 :::
-## Predicted probabilities of having Wikidata item
 
-::: notes
--   
-:::
 
 ## Network analysis: Family webs {.scrollable}
 
