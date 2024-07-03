@@ -11,7 +11,7 @@
     "href": "2024_knowgraph.html#knowlege-graph-bill-gates",
     "title": "How can the social sciences benefit from knowledge graphs?  Using Wikidata to examine the world’s billionaires",
     "section": "Knowlege Graph: Bill Gates",
-    "text": "Knowlege Graph: Bill Gates\nKnowledge graphs are defined as graphs of data that accumulate and convey knowledge of the real world. The nodes in knowledge graphs represent the entities of interest, and the edges represent the relations between the entities (Peng et al. 2023)\n https://explore.gnd.network/en/gnd/119081199/relations\n\n\nThese representations utilize formal semantics, which allows computers to process them efficiently and unambiguously. For example, the entity “Bill Gates” can be linked to the entity “Microsoft” because Bill Gates is the founder of Microsoft; thus, they have relationships in the real world."
+    "text": "Knowlege Graph: Bill Gates\nKnowledge graphs are defined as graphs of data that accumulate and convey knowledge of the real world. The nodes in knowledge graphs represent the entities of interest, and the edges represent the relations between the entities (Peng et al. 2023)\n https://explore.gnd.network/en/gnd/119081199/relations\n\n\nWhat is the cool thing about graphs? unlike relational databases you do not have tables, so no columns and rows to query from. But your query is a path. Example: retrieve the birth place of someone’s husband.\nThese representations utilize formal semantics, which allows computers to process them efficiently and unambiguously. For example, the entity “Bill Gates” can be linked to the entity “Microsoft” because Bill Gates is the founder of Microsoft; thus, they have relationships in the real world."
   },
   {
     "objectID": "2024_knowgraph.html#knowlege-graph-elon-musk",
@@ -19,6 +19,13 @@
     "title": "How can the social sciences benefit from knowledge graphs?  Using Wikidata to examine the world’s billionaires",
     "section": "Knowlege Graph: Elon Musk",
     "text": "Knowlege Graph: Elon Musk\n\nhttps://explore.gnd.network/en/gnd/1062481119/relations\n\n\nsth"
+  },
+  {
+    "objectID": "2024_knowgraph.html#example-of-knowledge-graphs",
+    "href": "2024_knowgraph.html#example-of-knowledge-graphs",
+    "title": "How can the social sciences benefit from knowledge graphs?  Using Wikidata to examine the world’s billionaires",
+    "section": "Example of Knowledge Graphs",
+    "text": "Example of Knowledge Graphs\n\nGoogle Knowlegde Graph (search engine optimization, providing direct answers to queries, enhancing search results with rich information boxes)\nDBpedia (extracts structured information from Wikipedia, semantic web, linked data, information retrieval, and data integration)\nMicrosoft Academic Knowledge Graph / Open Academic Graph (scientific publications and related entities, such as authors, institutions, journals, and fields of study for research purpose)\nWikiData …\n\n\n\ntriples: A subject, a predicate (describes relationship), and an object."
   },
   {
     "objectID": "2024_knowgraph.html#wikidata-as-a-knowledge-graph",
@@ -47,6 +54,13 @@
     "title": "How can the social sciences benefit from knowledge graphs?  Using Wikidata to examine the world’s billionaires",
     "section": "Caveats",
     "text": "Caveats\n\nAccuracy of the data (e.g., biases of the editors)\nMissing information (e.g., gender, language, race biases (Wagner et al. 2015))\n\n\n\nmostly anonymous volunteers.\naccuracy of the data is not guaranteed, and the perspectives and biases of the editors might influence the information provided"
+  },
+  {
+    "objectID": "2024_knowgraph.html#prior-social-science-research-with-wikidata",
+    "href": "2024_knowgraph.html#prior-social-science-research-with-wikidata",
+    "title": "How can the social sciences benefit from knowledge graphs?  Using Wikidata to examine the world’s billionaires",
+    "section": "Prior (Social Science) Research with Wikidata",
+    "text": "Prior (Social Science) Research with Wikidata\n\nMeasuring and modeling the dynamics of elite political networks (Yalcin 2021)\nScientometrical analyses (Seidlmayer et al. 2020)\nComparative Legislators Database (political, sociodemographic, career, online presence, public attention, and visual information for over 45,000 contemporary and historical politicians) (Gobel and Munzert 2022)\nMonitoring gender gaps (Klein et al. 2016)"
   },
   {
     "objectID": "2024_knowgraph.html#application-how-to-use-wikidata",
@@ -81,14 +95,14 @@
     "href": "2024_knowgraph.html#the-worlds-billionaires-on-wikidata",
     "title": "How can the social sciences benefit from knowledge graphs?  Using Wikidata to examine the world’s billionaires",
     "section": "The world’s billionaires on Wikidata",
-    "text": "The world’s billionaires on Wikidata\n\nDatabase: Forbes billionaires, 2010-2024\nN = 4504 billionaires\nSemi-automatically reconciled with Wikidata with the help of OpenRefine\n\n\n\nForbes magazine publishes a list of US dollar billionaires every year. Based on the list from 2010 until 2022, a data set including all listed billionaires is generated. The final data set includes a unique identifier, name, gender, birth date, country of citizenship, highest rank, and maximum wealth (between 2010 and 2024)\nOpenRefine is an open-source tool for working with messy data and includes a reconciliation function. Reconciliation means that string values are matched to entities in Wikidata or other databases. The mapping of the billionaires’ names to items in Wikidata was checked manually for all XXX individuals."
+    "text": "The world’s billionaires on Wikidata\n\nDatabase: Forbes billionaires, 2010-2024\nN = 4504 billionaires\nSemi-automatically reconciled with Wikidata with the help of OpenRefine\n\n\n\n\nForbes magazine publishes a list of US dollar billionaires every year. Based on the list from 2010 until 2022, a data set including all listed billionaires is generated. The final data set includes a unique identifier, name, gender, birth date, country of citizenship, highest rank, and maximum wealth (between 2010 and 2024)\nOpenRefine is an open-source tool for working with messy data and includes a reconciliation function. Reconciliation means that string values are matched to entities in Wikidata or other databases. The mapping of the billionaires’ names to items in Wikidata was checked manually for all XXX individuals."
   },
   {
     "objectID": "2024_knowgraph.html#coverage",
     "href": "2024_knowgraph.html#coverage",
     "title": "How can the social sciences benefit from knowledge graphs?  Using Wikidata to examine the world’s billionaires",
     "section": "Coverage",
-    "text": "Coverage\n\n\n\nsth"
+    "text": "Coverage\n\n\n\nBillionaires from China not well represented"
   },
   {
     "objectID": "2024_knowgraph.html#descriptive-statistics",
@@ -130,7 +144,7 @@
     "href": "2024_knowgraph.html#network-analysis-family-webs",
     "title": "How can the social sciences benefit from knowledge graphs?  Using Wikidata to examine the world’s billionaires",
     "section": "Network analysis: Family webs",
-    "text": "Network analysis: Family webs"
+    "text": "Network analysis: Family webs\n\n\n\n\n\n\n\n\nI show now one example of how to use WikiData to better understand that is describe the global billionaires: Family webs.\nResearch questions: Assortative mating, Strategic marriages, processes of social closure"
   },
   {
     "objectID": "2024_knowgraph.html#family-webs-with-at-least-5-billionaires",
@@ -147,17 +161,24 @@
     "text": "Family web with most billionaires (13)"
   },
   {
-    "objectID": "2024_knowgraph.html#what-can-be-done-with-wikidata",
-    "href": "2024_knowgraph.html#what-can-be-done-with-wikidata",
+    "objectID": "2024_knowgraph.html#further-things-to-do",
+    "href": "2024_knowgraph.html#further-things-to-do",
     "title": "How can the social sciences benefit from knowledge graphs?  Using Wikidata to examine the world’s billionaires",
-    "section": "What can be done with Wikidata?",
-    "text": "What can be done with Wikidata?\n\nUse to enrich own databases\nPublish own research data on Wikidata → good practice of open research data\nConnect to Wikipedia and analyse Wikipedia pages (e.g., content, page view, editing pages)\nExamining interconnections of different political and economic elites and / or elite institutions (or political parties, cultural organizations, companies)\nGenealogical data can be used to draw family webs"
+    "section": "Further things to do…",
+    "text": "Further things to do…\n\nQuestion: What are the patterns of migration for billionaires?\nData from Wikidata: Birthplaces, countries of residence\nQuestion: What are the educational background of billionaires?\nData from Wikidata: schools, degrees"
+  },
+  {
+    "objectID": "2024_knowgraph.html#summary-what-can-be-done-with-wikidata",
+    "href": "2024_knowgraph.html#summary-what-can-be-done-with-wikidata",
+    "title": "How can the social sciences benefit from knowledge graphs?  Using Wikidata to examine the world’s billionaires",
+    "section": "Summary: What can be done with WikiData?",
+    "text": "Summary: What can be done with WikiData?\n\nUse to enrich own databases\nPublish own research data on WikiData → good practice of open research data\nConnect to Wikipedia and analyse Wikipedia pages (e.g., content, page view, editing pages)\nExamining interconnections of different political and economic elites and / or elite institutions (or political parties, cultural organizations, companies)\nGenealogical data can be used to draw family webs"
   },
   {
     "objectID": "2024_knowgraph.html#references",
     "href": "2024_knowgraph.html#references",
     "title": "How can the social sciences benefit from knowledge graphs?  Using Wikidata to examine the world’s billionaires",
     "section": "References",
-    "text": "References\n\n\nPeng, Ciyuan, Feng Xia, Mehdi Naseriparsa, and Francesco Osborne. 2023. “Knowledge Graphs: Opportunities and Challenges.” Artificial Intelligence Review 56 (11): 13071–102. https://doi.org/10.1007/s10462-023-10465-9.\n\n\nShafee, Thomas, Oliver Keyes, Serena Signorelli, Alex Lum, Christian Graul, and Mikhail Popov. 2022. “WikidataR: API Client Library for’wikidata’.” https://github.com/TS404/WikidataR.\n\n\nWagner, Claudia, David Garcia, Mohsen Jadidi, and Markus Strohmaier. 2015. “ICWSM.” In, 454–63. https://www.aaai.org/ocs/index.php/ICWSM/ICWSM15/paper/viewFile/10585/10528.\n\n\nWikidata. 2023. “Wikidata: Introduction.” https://www.wikidata.org/wiki/Wikidata:Introduction."
+    "text": "References\n\n\nGobel, S, and S Munzert. 2022. “The Comparative Legislators Database.” BRITISH JOURNAL OF POLITICAL SCIENCE 52 (3): 1398–408. https://doi.org/10.1017/S0007123420000897.\n\n\nKlein, M, H Gupta, V Rai, P Konieczny, HY Zhu, and ACM. 2016. “PROCEEDINGS OF THE 12TH INTERNATIONAL SYMPOSIUM ON OPEN COLLABORATION (OPENSYM).” In. https://doi.org/10.1145/2957792.2957798.\n\n\nPeng, Ciyuan, Feng Xia, Mehdi Naseriparsa, and Francesco Osborne. 2023. “Knowledge Graphs: Opportunities and Challenges.” Artificial Intelligence Review 56 (11): 13071–102. https://doi.org/10.1007/s10462-023-10465-9.\n\n\nSeidlmayer, Eva, Jakob Voß, Tatyana Melnychuk, Lukas Galke, Klaus Tochtermann, Carsten Schultz, and Konrad U Förstner. 2020. “1st Wikidata Workshop (Wikidata 2020).” In. CEUR Workshop Proceedings.\n\n\nShafee, Thomas, Oliver Keyes, Serena Signorelli, Alex Lum, Christian Graul, and Mikhail Popov. 2022. “WikidataR: API Client Library for’wikidata’.” https://github.com/TS404/WikidataR.\n\n\nWagner, Claudia, David Garcia, Mohsen Jadidi, and Markus Strohmaier. 2015. “ICWSM.” In, 454–63. https://www.aaai.org/ocs/index.php/ICWSM/ICWSM15/paper/viewFile/10585/10528.\n\n\nWikidata. 2023. “Wikidata: Introduction.” https://www.wikidata.org/wiki/Wikidata:Introduction.\n\n\nYalcin, Omer Faruk. 2021. “Measuring and Modeling the Dynamics of Elite Political Networks.”"
   }
 ]

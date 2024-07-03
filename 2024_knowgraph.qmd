@@ -16,6 +16,16 @@ slide-number:
 bibliography: references.bib
 ---
 
+::: notes
+-   Have you ever wondered how Google seems to understand exactly what you're looking for, even if your search query is vague?
+
+-   The secret behind such intelligent search results lies in a technology called a knowledge graph. A knowledge graph is a structured representation of knowledge, where entities (such as people, places, or things) and their relationships are interconnected, much like a map of knowledge.
+
+-   Knowledge graphs are transforming how we access and interact with information. They power search engines, recommendation systems, virtual assistants
+
+-   SO how can social scientists benefit from knowlegde graphs?\
+:::
+
 ## Introduction
 
 ::: columns
@@ -49,6 +59,7 @@ Knowledge graphs are defined as graphs of data that accumulate and convey knowle
 ![](pics/bill.png){fig-align="center"} <https://explore.gnd.network/en/gnd/119081199/relations>
 
 ::: notes
+-   What is the cool thing about graphs? unlike relational databases you do not have tables, so no columns and rows to query from. But your query is a path. Example: retrieve the birth place of someone's husband.
 -   These representations utilize formal semantics, which allows computers to process them efficiently and unambiguously. For example, the entity “Bill Gates" can be linked to the entity “Microsoft" because Bill Gates is the founder of Microsoft; thus, they have relationships in the real world.
 :::
 
@@ -60,6 +71,21 @@ Knowledge graphs are defined as graphs of data that accumulate and convey knowle
 
 ::: notes
 -   sth
+:::
+
+## Example of Knowledge Graphs
+
+-   Google Knowlegde Graph (search engine optimization, providing direct answers to queries, enhancing search results with rich information boxes)
+
+-   DBpedia (extracts structured information from Wikipedia, semantic web, linked data, information retrieval, and data integration)
+
+-   Microsoft Academic Knowledge Graph / Open Academic Graph (scientific publications and related entities, such as authors, institutions, journals, and fields of study for research purpose)
+
+-   WikiData ...
+
+::: notes
+-   triples: A subject, a predicate (describes relationship), and an object.
+-   
 :::
 
 ## Wikidata as a knowledge graph
@@ -121,6 +147,17 @@ Knowledge graphs are defined as graphs of data that accumulate and convey knowle
 -   accuracy of the data is not guaranteed, and the perspectives and biases of the editors might influence the information provided
 :::
 
+## Prior (Social Science) Research with Wikidata
+
+-   Measuring and modeling the dynamics of elite political networks [@yalcin2021]
+-   Scientometrical analyses [@seidlmayer2020]
+-   Comparative Legislators Database (political, sociodemographic, career, online presence, public attention, and visual information for over 45,000 contemporary and historical politicians) [@gobel2022]
+-   Monitoring gender gaps [@klein2016]
+
+::: notes
+-   
+:::
+
 ## Application: How to use Wikidata
 
 -   Use the language SPARQL to formulate questions (queries) for knowledge databases
@@ -179,6 +216,8 @@ Knowledge graphs are defined as graphs of data that accumulate and convey knowle
 -   N = 4504 billionaires
 
 -   Semi-automatically reconciled with Wikidata with the help of OpenRefine
+
+![](pics/openrefine.png){fig-align="center"}
 
 ::: notes
 -   Forbes magazine publishes a list of US dollar billionaires every year. Based on the list from 2010 until 2022, a data set including all listed billionaires is generated. The final data set includes a unique identifier, name, gender, birth date, country of citizenship, highest rank, and maximum wealth (between 2010 and 2024)
@@ -329,111 +368,151 @@ map_coverage
 ```
 
 ::: notes
--   sth
+-   Billionaires from China not well represented
 :::
 
 ## Descriptive statistics
+
 ```{r}
 #| echo: false
 #| output: true
 browsable(HTML(descriptives))
 ```
+
 ::: notes
 -   
 :::
 
 ## Who is covered?
+
 ```{r}
 #| echo: false
 #| output: true
 p1
 ```
+
 ::: notes
 -   
 :::
 
 ## Who is covered?
+
 ```{r}
 #| echo: false
 #| output: true
 p8
 ```
+
 ::: notes
 -   
 :::
 
 ## Who is covered?
+
 ```{r}
 #| echo: false
 #| output: true
 p4
 ```
+
 ::: notes
 -   
 :::
 
-
 ## Who is covered?
+
 ```{r}
 #| echo: false
 #| output: true
 p7
 ```
+
 ::: notes
 -   
 :::
 
-
 ## Network analysis: Family webs {.scrollable}
 
 ```{r}
+
 #| echo: false
+
 #| output: false
+
 source("../code/03_family_webs.R")
 
 ```
 
 ```{r}
+
 #| echo: false
+
 #| output: true
+
 widget_all
 
 ```
 
 ::: notes
--   
+
+- I show now one example of how to use WikiData to better understand that is describe the global billionaires: Family webs. 
+- Research questions: Assortative mating, Strategic marriages, processes of social closure
+
 :::
 
 ## Family webs with at least 5 billionaires {.scrollable}
 
 ```{r}
+
 #| echo: false
+
 #| output: true
+
 widget_5
 
 ```
 
 ::: notes
--   
+
+-
+
 :::
 
 ## Family web with most billionaires (13) {.scrollable}
 
 ```{r}
+
 #| echo: false
+
 #| output: true
+
 p_fam_largest
 
 ```
 
 ::: notes
--   
+
+-
+
 :::
 
-## What can be done with Wikidata?
+
+## Further things to do...
+- Question: What are the patterns of migration for billionaires?
+- Data from Wikidata: Birthplaces, countries of residence
+- Question: What are the educational background of billionaires?
+- Data from Wikidata: schools, degrees
+
+::: notes
+
+-
+
+:::
+
+## Summary: What can be done with WikiData?
 
 -   Use to enrich own databases
--   Publish own research data on Wikidata → good practice of open research data
+-   Publish own research data on WikiData → good practice of open research data
 -   Connect to Wikipedia and analyse Wikipedia pages (e.g., content, page view, editing pages)
 -   Examining interconnections of different political and economic elites and / or elite institutions (or political parties, cultural organizations, companies)
 -   Genealogical data can be used to draw family webs
