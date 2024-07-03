@@ -1,0 +1,366 @@
+---
+title: "How can the social sciences benefit from knowledge graphs? <br>  Using Wikidata to examine the world’s billionaires"
+author: "<br> Wealth Data Science Summer/Winter School 2024 <br> <br> Daria Tisch <br>  <br> Max-Planck-Institut für Gesellschaftsforschung"
+subtitle: "<br> July 2024"  
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+    preview-links: auto
+    chalkboard: 
+      boardmarker-width: 5
+editor: visual
+slide-number:
+  c
+  #https://quarto.org/docs/publishing/github-pages.html#render-to-docs
+#bibliography: references.bib
+bibliography: references.bib
+---
+
+## Introduction
+
+::: columns
+::: {.column width="40%"}
+![](pics/knowgraph.webp){.absolute top="100" left="0" width="350"}
+:::
+
+::: {.column width="60%"}
+-   What are knowlegde graphs?
+
+-   How can the social sciences benefit from knowledge graphs?
+
+-   Using Wikidata to study the superrich
+:::
+:::
+
+::: notes
+-   Have you ever wondered how Google seems to understand exactly what you're looking for, even if your search query is vague?
+
+-   The secret behind such intelligent search results lies in a technology called a knowledge graph. A knowledge graph is a structured representation of knowledge, where entities (such as people, places, or things) and their relationships are interconnected, much like a map of knowledge.
+
+-   Knowledge graphs are transforming how we access and interact with information. They power search engines, recommendation systems, virtual assistants
+
+-   SO how can social scientists benefit from knowlegde graphs?\
+:::
+
+## Knowlege Graph: Bill Gates
+
+Knowledge graphs are defined as graphs of data that accumulate and convey knowledge of the real world. The nodes in knowledge graphs represent the entities of interest, and the edges represent the relations between the entities [@peng2023]
+
+![](pics/bill.png){fig-align="center"} <https://explore.gnd.network/en/gnd/119081199/relations>
+
+::: notes
+-   These representations utilize formal semantics, which allows computers to process them efficiently and unambiguously. For example, the entity “Bill Gates" can be linked to the entity “Microsoft" because Bill Gates is the founder of Microsoft; thus, they have relationships in the real world.
+:::
+
+## Knowlege Graph: Elon Musk
+
+![](pics/musk.png){fig-align="center"}
+
+<https://explore.gnd.network/en/gnd/1062481119/relations>
+
+::: notes
+-   sth
+:::
+
+## Wikidata as a knowledge graph
+
+::: columns
+::: {.column width="40%"}
+![](pics/gates_wiki.png){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+-   "Wikidata is a free, collaborative, multilingual, secondary database, collecting structured data to provide support for Wikipedia, Wikimedia Commons, the other wikis of the Wikimedia movement, and to anyone in the world"[@wikidata2023]
+
+-   Can be read and edited by both humans and machines.
+
+-   Centralized storage for the structured data of Wikimedia projects (e.g., Wikipedia)
+
+-   Each item in Wikidata is linked to various attributes and other items, allowing for complex queries and data extraction.
+:::
+:::
+
+## Wikidata Page: Bill Gates
+
+<iframe src="https://www.wikidata.org/wiki/Q5284" width="100%" height="500px">
+
+</iframe>
+
+[Bill Gates](https://www.wikidata.org/wiki/Q5284)
+
+::: notes
+-   show different example quieries in the wikidata querie service
+-   occupation of Father of father of Bill Gates
+:::
+
+## Wikidata’s strengths for the social science
+
+-   Wikidata as content provider: provides structured, human- and machine-readable information on different topics → create data sets from structured data using the query language\
+    SPARQL
+-   Wikidata as linked open data provider: Wikidata provides not only links within the Wikidata knowledge graph but also links to other databases via external identifiers (e.g., Twitter, ORCID, movie databases)
+-   Wikidata as a growing knowledge base: Social scientists may contribute to Wikidata by importing their data or linking their data to existing datasets (e.g., Comparative Legislators Database**)**
+-   Wikidata is multilingual: research without language barriers, named entity linking
+-   Wikidata is free: available for anyone to use, reuse, and redistribute
+
+::: notes
+-   For example, Wikidata entries about actresses can be\
+    easily linked to their entries in movie databases. Or Wikidata entries of scientists can be\
+    easily linked to their entries in the ORCID database (Seidlmayer et al. 2020). Individuals on\
+    Wikidata can also be linked to their Twitter accounts or entries in different encyclopedias.
+-   
+:::
+
+## Caveats
+
+-   Accuracy of the data (e.g., biases of the editors)
+
+-   Missing information (e.g., gender, language, race biases [@wagner2015])
+
+::: notes
+-   mostly anonymous volunteers.
+-   accuracy of the data is not guaranteed, and the perspectives and biases of the editors might influence the information provided
+:::
+
+## Application: How to use Wikidata
+
+-   Use the language SPARQL to formulate questions (queries) for knowledge databases
+
+-   Wikidata Query Service (<https://query.wikidata.org/>)
+
+-   WikidataR is a read-write API client library for Wikidata [@shafee2022] (to send SPARQL queries to the Wikidata Query Service SPARQL endpoint)
+
+-   To learn writing SPARQL queries, Wikidata's tutorial page (<https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial>) and the examples at the Wikidata Query Service are helpful
+
+::: notes
+-   With the right database, a SPARQL query could answer questions like “what is the most popular tonality in music?” or “which character was portrayed by the most actors?” or “what’s the distribution of blood types?” or “which authors’ works entered the public domain this year?”.
+:::
+
+## Queries
+
+<iframe src="https://query.wikidata.org/" width="100%" height="500px">
+
+</iframe>
+
+[Wikidata Query Service](https://query.wikidata.org/)
+
+::: notes
+-   show different example quieries in the wikidata querie service
+-   occupation of Father of father of Bill Gates
+:::
+
+## Query: What is the place of birth of Bill Gates' grandfather?
+
+<iframe src="https://w.wiki/AYt9" width="100%" height="500px">
+
+</iframe>
+
+[Link to query](https://w.wiki/AYt9)
+
+::: notes
+-   place of birth of grandfather of Bill Gates
+:::
+
+## Query: How many employees does Bill Gates have?
+
+<iframe src="https://w.wiki/AYtT" width="100%" height="500px">
+
+</iframe>
+
+[Link to query](https://w.wiki/AYtT)
+
+::: notes
+-   https://w.wiki/AYtT
+:::
+
+## The world’s billionaires on Wikidata
+
+-   Database: Forbes billionaires, 2010-2024
+
+-   N = 4504 billionaires
+
+-   Semi-automatically reconciled with Wikidata with the help of OpenRefine
+
+::: notes
+-   Forbes magazine publishes a list of US dollar billionaires every year. Based on the list from 2010 until 2022, a data set including all listed billionaires is generated. The final data set includes a unique identifier, name, gender, birth date, country of citizenship, highest rank, and maximum wealth (between 2010 and 2024)
+-   OpenRefine is an open-source tool for working with messy data and includes a reconciliation function. Reconciliation means that string values are matched to entities in Wikidata or other databases. The mapping of the billionaires' names to items in Wikidata was checked manually for all XXX individuals.
+:::
+
+## Coverage
+
+```{r}
+#| echo: false
+#| output: false
+
+# create vector with needed packages
+pkgs <- c("xtable", # to export dfs as e.g. latex tables
+              "knitr", # for dynamic reporting, e.g. saving tables
+              "tidyverse", # to prepare/tidy data,
+              "ggplot2", # for creating plots
+              "sjPlot", # for marginal effect plots
+              "stargazer", # for regression tables
+              "WikipediR", # recommended in method bites: wrapper for the MediaWiki API
+              # "WikidataR", # recommended in method bites: read, query, write wikidata, so this would be an alternative to SPARQL
+              "pageviews", # recommended in method bites: API client for Wikimedia traffic data
+              # "networkD3", # recommended in method bites: for creating network graphs
+              "lubridate", # recommended in method bites: parse date formats#
+              "legislatoR", # to understand the method bites article better
+          "jtools", # Visualizing regression model predictions
+          "ggpubr" # arrange ggplots
+)
+
+# install missing packages
+lapply(pkgs[!(pkgs %in% installed.packages())], install.packages)
+
+# load packages
+lapply(pkgs, library, character.only = TRUE)
+
+# Set working directory
+Sys.info()['nodename']
+work_dir = ifelse(Sys.info()['nodename']=="P2010", 
+                  "C:/Users/ti/Local/seafile/main/---projects---/bill_wiki",
+                  "D:/Seafile/main/---projects---/bill_wiki")
+setwd(work_dir)
+getwd()
+load("data_scraped/df_bill_wiki.RData")
+df = df %>%
+  mutate(d_wikidata = ifelse(is.na(id_wikidata), 0, 1),
+         d_wikipedia = ifelse(is.na(page_id), 0, 1),
+         birthyear = as.numeric(birthyear),
+         properties_count = as.numeric(properties_count),
+         gender = ifelse(gender == "M", "Male",
+                         ifelse(gender == "F", "Female", gender)))
+#* Coverage of billionaires
+
+
+world <- map_data("world") %>%
+  mutate(region = ifelse(subregion == "Hong Kong" & !is.na(subregion), "Hong Kong", region))
+
+
+map <- df %>% 
+  group_by(countryOfCitizenship) %>% 
+  dplyr::summarise(n = n(),
+                   coverage = round(mean(d_wikidata) * 100, 2)
+  ) %>% 
+  as.data.frame() %>%
+  ungroup() %>%
+  arrange(-n) %>%
+  mutate(region = countryOfCitizenship) %>%
+  select(-countryOfCitizenship)
+
+
+
+# rename country names to fit those of the "world" data
+map$region[map$region == "British Virgin Islands"] <- "Virgin Islands"
+map$region[map$region == "Czechia"] <- "Czech Republic"
+map$region[map$region == "Eswatini (Swaziland)"] <- "Swaziland"
+map$region[map$region == "United Kingdom"] <- "UK"
+map$region[map$region == "United States"] <- "USA"
+map$region[map$region == "St. Kitts and Nevis"] <- "Nevis"
+
+
+# merge "world" data with billionare frequencies
+world_f <- left_join(world, map, by = "region")
+
+map_coverage <- ggplot(data = world_f , aes(x = long, y = lat, group = group),
+                     size = 0.1) +
+  geom_polygon(aes(fill = coverage), color = "black") +
+  theme_void() +
+  scale_fill_gradient("Wikidata coverage", low = "darkblue", 
+                      high = "lightblue", na.value = "white") + 
+  theme(legend.position = "right", 
+        legend.title = element_text(size = 10),
+        legend.text = element_text(size = 10))
+
+```
+
+```{r}
+#| echo: false
+#| output: true
+map_coverage
+
+```
+
+::: notes
+-   sth
+:::
+
+## Descriptive statistics
+
+::: notes
+-   
+:::
+
+## Who is covered?
+
+::: notes
+-   
+:::
+
+## Predicted probabilities of having Wikidata item
+
+::: notes
+-   
+:::
+
+## Network analysis: Family webs {.scrollable}
+
+```{r}
+#| echo: false
+#| output: false
+source("../code/03_family_webs.R")
+
+```
+
+```{r}
+#| echo: false
+#| output: true
+widget_all
+
+```
+
+::: notes
+-   
+:::
+
+## Family webs with at least 5 billionaires {.scrollable}
+
+```{r}
+#| echo: false
+#| output: true
+widget_5
+
+```
+
+::: notes
+-   
+:::
+
+## Family web with most billionaires (13) {.scrollable}
+
+```{r}
+#| echo: false
+#| output: true
+p_fam_largest
+
+```
+
+::: notes
+-   
+:::
+
+## What can be done with Wikidata?
+
+-   Use to enrich own databases
+-   Publish own research data on Wikidata → good practice of open research data
+-   Connect to Wikipedia and analyse Wikipedia pages (e.g., content, page view, editing pages)
+-   Examining interconnections of different political and economic elites and / or elite institutions (or political parties, cultural organizations, companies)
+-   Genealogical data can be used to draw family webs
+
+::: notes
+-   
+:::
+
+## References
+
+::: {#refs}
+:::
