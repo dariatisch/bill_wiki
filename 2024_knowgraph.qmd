@@ -16,7 +16,6 @@ slide-number:
 bibliography: references.bib
 ---
 
-
 ## Introduction
 
 ::: columns
@@ -144,6 +143,7 @@ Knowledge graphs are defined as graphs of data that accumulate and convey knowle
 -   Scientometrical analyses [@seidlmayer2020]
 -   Comparative Legislators Database (political, sociodemographic, career, online presence, public attention, and visual information for over 45,000 contemporary and historical politicians) [@gobel2022]
 -   Monitoring gender gaps [@klein2016]
+-   Social closure at the top of the German wealth distribution [@tisch2023]
 
 ::: notes
 -   
@@ -445,10 +445,8 @@ widget_all
 ```
 
 ::: notes
-
-- I show now one example of how to use WikiData to better understand that is describe the global billionaires: Family webs. 
-- Research questions: Assortative mating, Strategic marriages, processes of social closure
-
+-   I show now one example of how to use WikiData to better understand that is describe the global billionaires: Family webs.
+-   Research questions: Assortative mating, Strategic marriages, processes of social closure
 :::
 
 ## Family webs with at least 5 billionaires {.scrollable}
@@ -464,9 +462,7 @@ widget_5
 ```
 
 ::: notes
-
--
-
+-   
 :::
 
 ## Family web with most billionaires (13) {.scrollable}
@@ -477,27 +473,23 @@ widget_5
 
 #| output: true
 
-p_fam_largest
+widget_13
 
 ```
 
 ::: notes
-
--
-
+-   
 :::
 
-
 ## Further things to do...
-- Question: What are the patterns of migration for billionaires?
-- Data from Wikidata: Birthplaces, countries of residence
-- Question: What are the educational background of billionaires?
-- Data from Wikidata: schools, degrees
+
+-   Question: What are the patterns of migration for billionaires?
+-   Data from Wikidata: Birthplaces, countries of residence
+-   Question: What are the educational background of billionaires?
+-   Data from Wikidata: schools, degrees
 
 ::: notes
-
--
-
+-   
 :::
 
 ## Summary: What can be done with WikiData?
